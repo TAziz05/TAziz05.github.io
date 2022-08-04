@@ -1,0 +1,83 @@
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ ls[K[Kgit init
+Initialized empty Git repository in /projects/bddc9f3b-0b6e-4669-ad3e-82f6ebed57a3/Towfiq/app/.git/
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ echo 'Project from AI Camp Summer 2[K2022' > README.MD[K[Kmd
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ ls
+README.md  [0m[01;34m__pycache__[0m  index.html  main.py  requirements.txt  [01;34mstatic[0m  [01;34mtemplates[0m  term2.term  utils.py
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ cat main.py
+# import requirements needed
+from flask import Flask, render_template
+from utils import get_base_url
+
+# setup the webserver
+# port may need to be changed if there are multiple flask servers running on same server
+port = 12346
+base_url = get_base_url(port)
+
+# if the base url is not empty, then the server is running in development, and we need to specify the static folder so that the static files are served
+if base_url == '/':
+    app = Flask(__name__)
+else:
+    app = Flask(__name__, static_url_path=base_url+'static')
+
+# set up the routes and logic for the webserver
+@app.route(f'{base_url}')
+def home():
+    return render_template('index.html')
+
+# define additional routes here
+# for example:
+# @app.route(f'{base_url}/team_members')
+# def team_members():
+#     return render_template('team_members.html') # would need to actually make this page
+
+if __name__ == '__main__':
+    # IMPORTANT: change url to the site where you are editing this file.
+    website_url = 'https://cocalc4.ai-camp.dev'
+
+    print(f'Try to open\n\n    https://{website_url}' + base_url + '\n\n')
+    app.run(host = '0.0.0.0', port=port, debug=True)
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ jhh[K[K[Kgit add README.md
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ h[Kgit commit -m 'First Commit"[K'
+[master (root-commit) 5ceee99] First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ git branch -M main
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ git remote add origin https://github.com/TAziz05/TAziz05.github.io.git
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ git remote --read[K[K[K[Kversion
+error: unknown option `version'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ git remote --v
+origin	https://github.com/TAziz05/TAziz05.github.io.git (fetch)
+origin	https://github.com/TAziz05/TAziz05.github.io.git (push)
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$  git push --set-upstream origin main[Kn[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Username for 'https://github.com': TAziz05
+Password for 'https://TAziz05@github.com': 
+Enumerating objects: 3, done.
+Counting objects:  33% (1/3)Counting objects:  66% (2/3)Counting objects: 100% (3/3)Counting objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 238 bytes | 238.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/TAziz05/TAziz05.github.io.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ [K(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ g
