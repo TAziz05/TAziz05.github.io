@@ -126,4 +126,36 @@ Total 39 (delta 11), reused 0 (delta 0)
 remote: Resolving deltas:   0% (0/11)[Kremote: Resolving deltas:   9% (1/11)[Kremote: Resolving deltas:  18% (2/11)[Kremote: Resolving deltas:  27% (3/11)[Kremote: Resolving deltas:  36% (4/11)[Kremote: Resolving deltas:  45% (5/11)[Kremote: Resolving deltas:  54% (6/11)[Kremote: Resolving deltas:  63% (7/11)[Kremote: Resolving deltas:  72% (8/11)[Kremote: Resolving deltas:  81% (9/11)[Kremote: Resolving deltas:  90% (10/11)[Kremote: Resolving deltas: 100% (11/11)[Kremote: Resolving deltas: 100% (11/11), done.[K
 To https://github.com/TAziz05/TAziz05.github.io.git
    5ceee99..cbfdb54  main -> main
-(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ [K(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ 
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ [K(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ git add -A
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ git commit--[K[K --,[Km 'Index Fix'
+[main c535cc7] Index Fix
+ 3 files changed, 65 insertions(+), 260 deletions(-)
+ delete mode 100644 templates/index2.html
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ git push
+Username for 'https://github.com': TAziz05
+Password for 'https://TAziz05@github.com': 
+Enumerating objects: 7, done.
+Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 3.04 KiB | 3.04 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/TAziz05/TAziz05.github.io.git
+   cbfdb54..c535cc7  main -> main
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ (base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ [K(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ git pull origin main
+remote: Enumerating objects: 11, done.[K
+remote: Counting objects:   9% (1/11)[Kremote: Counting objects:  18% (2/11)[Kremote: Counting objects:  27% (3/11)[Kremote: Counting objects:  36% (4/11)[Kremote: Counting objects:  45% (5/11)[Kremote: Counting objects:  54% (6/11)[Kremote: Counting objects:  63% (7/11)[Kremote: Counting objects:  72% (8/11)[Kremote: Counting objects:  81% (9/11)[Kremote: Counting objects:  90% (10/11)[Kremote: Counting objects: 100% (11/11)[Kremote: Counting objects: 100% (11/11), done.[K
+remote: Compressing objects:  16% (1/6)[Kremote: Compressing objects:  33% (2/6)[Kremote: Compressing objects:  50% (3/6)[Kremote: Compressing objects:  66% (4/6)[Kremote: Compressing objects:  83% (5/6)[Kremote: Compressing objects: 100% (6/6)[Kremote: Compressing objects: 100% (6/6), done.[K
+remote: Total 7 (delta 4), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  14% (1/7)Unpacking objects:  28% (2/7)Unpacking objects:  42% (3/7)Unpacking objects:  57% (4/7)Unpacking objects:  71% (5/7)Unpacking objects:  85% (6/7)Unpacking objects: 100% (7/7)Unpacking objects: 100% (7/7), 1.40 KiB | 205.00 KiB/s, done.
+From https://github.com/TAziz05/TAziz05.github.io
+ * branch            main       -> FETCH_HEAD
+   c535cc7..c0b9f85  main       -> origin/main
+Updating c535cc7..c0b9f85
+Fast-forward
+ index.html           | 6 [32m+++[m[31m---[m
+ templates/index.html | 4 [32m++[m[31m--[m
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ 
+(base) ]0;~/Towfiq/app[01;34m~/Towfiq/app[00m$ git pull origin main[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit pull origin main[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kg
