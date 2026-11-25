@@ -87,6 +87,11 @@
       -webkit-background-clip: text; background-clip: text; color: transparent;
     }
     .lede { font-size: clamp(1.05rem, 2.2vw, 1.25rem); color: var(--muted); max-width: 620px; }
+    .vibe {
+      margin-top: 18px; max-width: 620px; font-size: .92rem; color: var(--muted);
+      padding: 10px 14px; border-left: 3px solid var(--violet); background: rgba(139,92,246,.07); border-radius: 0 10px 10px 0;
+    }
+    .vibe strong { color: var(--text); font-weight: 500; }
     .socials { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
     .btn {
       display: inline-flex; align-items: center; gap: 9px;
@@ -174,7 +179,7 @@
     .music .body { padding: 30px; }
     .eq { display: flex; align-items: flex-end; justify-content: center; gap: 7px; padding: 34px 26px; min-height: 230px; background: radial-gradient(circle at 50% 100%, rgba(34,211,238,.18), transparent 70%); }
     .eq span {
-      width: 14px; border-radius: 5px 5px 2px 2px;
+      flex: 1; max-width: 14px; border-radius: 5px 5px 2px 2px;
       background: linear-gradient(to top, var(--violet), var(--cyan));
       animation: bounce 1.2s ease-in-out infinite;
       height: 30%;
@@ -237,6 +242,7 @@
       <span class="tag"><i></i> Builder · Gamer · Creator</span>
       <h1>Hey, I'm <span class="hl">Towfiq Aziz.</span></h1>
       <p class="lede">I build daily trivia games, write music entirely in code, and make Fortnite videos and streams. These are the projects I'm proudest of.</p>
+      <p class="vibe">Drop-In Daily, Daily Poké Catch and Coded Music were <strong>vibe coded with Claude</strong>: my ideas and direction, Claude's code. Tap <strong>Behind the Build</strong> on each one to see how it came together.</p>
       <div class="socials">
         <a class="btn primary" href="#games">See my games ↓</a>
         <a class="btn yt" href="https://www.youtube.com/@taziz322" target="_blank" rel="noopener">
@@ -280,6 +286,7 @@
             <div class="actions">
               <a class="btn primary" href="https://taziz05.github.io/drop-in-daily/" target="_blank" rel="noopener">Play ▸</a>
               <a class="btn" href="https://github.com/TAziz05/drop-in-daily" target="_blank" rel="noopener">Code</a>
+              <a class="btn" href="https://github.com/TAziz05/drop-in-daily/blob/main/HOW-I-VIBE-CODED.md" target="_blank" rel="noopener">Behind the Build</a>
             </div>
           </div>
         </article>
@@ -300,6 +307,7 @@
             <div class="actions">
               <a class="btn primary" href="https://taziz05.github.io/daily-poke-catch/" target="_blank" rel="noopener">Play ▸</a>
               <a class="btn" href="https://github.com/TAziz05/daily-poke-catch" target="_blank" rel="noopener">Code</a>
+              <a class="btn" href="https://github.com/TAziz05/daily-poke-catch/blob/main/HOW-I-VIBE-CODED.md" target="_blank" rel="noopener">Behind the Build</a>
             </div>
           </div>
         </article>
@@ -327,6 +335,7 @@
             <a class="btn primary" href="https://taziz05.github.io/coded-music/" target="_blank" rel="noopener">Listen ▸</a>
             <a class="btn" href="https://taziz05.github.io/coded-music/loop-lab/" target="_blank" rel="noopener">Try Loop Lab</a>
             <a class="btn" href="https://github.com/TAziz05/coded-music" target="_blank" rel="noopener">Code</a>
+              <a class="btn" href="https://github.com/TAziz05/coded-music/blob/main/HOW-I-VIBE-CODED.md" target="_blank" rel="noopener">Behind the Build</a>
           </div>
         </div>
         <div class="eq" id="eq" aria-hidden="true"></div>
