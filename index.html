@@ -223,6 +223,21 @@
     .music .art.shot.music-shot { height: auto; min-height: 260px; border-bottom: 0; border-left: 1px solid #33255a; }
     @media (max-width: 760px) { .music .art.shot.music-shot { height: 220px; min-height: 0; border-left: 0; border-top: 1px solid #33255a; order: -1; } }
 
+    .art.shot { height: auto; aspect-ratio: 1200 / 630; }
+    .wide { display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; margin-top: 20px; }
+    .wide > * { min-width: 0; }
+    .wide .art.shot { height: auto; border-bottom: 0; }
+    .wide.music-card { margin-top: 0; background: linear-gradient(135deg, #1a1033, #120a26); border-color: #33255a; }
+    .proto { display: inline-block; vertical-align: middle; margin-left: 8px; font-family: "Space Grotesk", sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; color: #ffd23f; border: 1px solid rgba(255,210,63,.45); background: rgba(255,210,63,.08); }
+    @media (max-width: 760px) {
+      .wide { grid-template-columns: 1fr; }
+      .wide .art.shot { height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+      .body { padding: 18px 18px 20px; }
+      .body h3 { font-size: 1.3rem; }
+      .actions { gap: 8px; }
+      .actions .btn { padding: 8px 12px; font-size: .85rem; }
+    }
+
     /* ---------- Footer ---------- */
     footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 30px 0 40px; color: var(--muted); font-size: .88rem; }
     footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; }
@@ -250,7 +265,7 @@
       <span class="tag"><i></i> Builder · Gamer · Creator</span>
       <h1>Hey, I'm <span class="hl">Towfiq Aziz.</span></h1>
       <p class="lede">I build daily trivia games, write music entirely in code, and make Fortnite videos and streams. These are the projects I'm proudest of.</p>
-      <p class="vibe">Drop-In Daily, Daily Poké Catch and Coded Music were <strong>vibe coded with Claude</strong>: my ideas and direction, Claude's code. Tap <strong>Behind the Build</strong> on each one to see how it came together.</p>
+      <p class="vibe">Drop-In Daily, Daily Poké Catch, Coded Music and Trivia Study were <strong>vibe coded with Claude</strong>: my ideas and direction, Claude's code. Tap <strong>Behind the Build</strong> on each one to see how it came together.</p>
       <div class="socials">
         <a class="btn primary" href="#games">See my games ↓</a>
         <a class="btn yt" href="https://www.youtube.com/@taziz322" target="_blank" rel="noopener">
@@ -286,7 +301,7 @@
           </div>
           <div class="body">
             <h3>Drop-In Daily</h3>
-            <p>Drop into a new set of Fortnite trivia every day, with a skydive intro, a players-left counter, and a sky that follows your real clock from sunrise to meteor showers. The questions run from Easy to Impossible on lore, seasons, modes and events, all hand-checked against the Fortnite Wiki. You can also play it as a Discord bot and as a Twitch extension.</p>
+            <p>A new set of Fortnite trivia every day. You skydive in, survive the elimination feed, and the sky follows your real clock. Every answer is checked against the Fortnite Wiki, and you can play on Discord and Twitch too.</p>
             <div class="chips"><span class="chip">JavaScript</span><span class="chip">GitHub Pages</span><span class="chip">Discord</span><span class="chip">Twitch Extension</span></div>
             <div class="actions">
               <a class="btn primary" href="https://taziz05.github.io/drop-in-daily/" target="_blank" rel="noopener">Play ▸</a>
@@ -303,7 +318,7 @@
           </div>
           <div class="body">
             <h3>Daily Poké Catch</h3>
-            <p>Every question is a wild encounter in a retro battle screen. Answer it right to throw a ball and catch it. There's a new set every day, from Poké Ball to Master Ball difficulty, covering every Pokémon, the games, the anime and the manga, sourced from Bulbapedia and the official Pokédex.</p>
+            <p>Every question is a wild encounter in a retro battle screen, and you catch it by answering right. There's a new set every day, from Poké Ball to Master Ball difficulty.</p>
             <div class="chips"><span class="chip">JavaScript</span><span class="chip">GitHub Pages</span><span class="chip">Discord</span></div>
             <div class="actions">
               <a class="btn primary" href="https://taziz05.github.io/daily-poke-catch/" target="_blank" rel="noopener">Play ▸</a>
@@ -314,6 +329,22 @@
         </article>
 
       </div>
+      <article class="card wide">
+        <div class="art shot">
+          <img src="assets/trivia-study.png" alt="Trivia Study: turn your class notes into a daily quiz" loading="lazy" style="object-position: center center;">
+          <span class="year">2026</span>
+        </div>
+        <div class="body">
+          <h3>Trivia Study <span class="proto">Prototype</span></h3>
+          <p>It's still a prototype, but I wanted to share it because I think the idea could really help students. Upload your class PDFs and it turns them into a daily quiz, and missed questions come back 1, 3, 7 and 16 days later. It's free, with no account, and it all runs in your browser.</p>
+          <div class="chips"><span class="chip">JavaScript</span><span class="chip">pdf.js</span><span class="chip">Spaced repetition</span></div>
+          <div class="actions">
+            <a class="btn primary" href="https://taziz05.github.io/trivia-study/" target="_blank" rel="noopener">Try it ▸</a>
+            <a class="btn" href="https://github.com/TAziz05/trivia-study" target="_blank" rel="noopener">Code</a>
+            <a class="btn" href="https://github.com/TAziz05/trivia-study/blob/main/HOW-I-VIBE-CODED.md" target="_blank" rel="noopener">Behind the Build</a>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -325,12 +356,15 @@
         <h2>Coded Music</h2>
         <p>Every note is written as code, with no AI audio.</p>
       </div>
-      <div class="music">
+      <article class="card wide music-card">
+        <div class="art shot">
+          <img src="assets/coded-music.png" alt="Coded Music: song covers and the Coded Music logo" loading="lazy" style="object-position: center center;">
+          <span class="year">2026</span>
+        </div>
         <div class="body">
           <button class="play" id="playBtn" type="button"><i>▶</i> <span>Play a quick coded loop</span></button>
           <h3>Original songs, written in code</h3>
-          <p>Over 200 original songs where every note is written as code, made for my games and gameplay videos. Some are even built from words, pictures and DNA. You can search, sort, loop and download every song. If you use one, please give credit with the song name and a link back.</p>
-          <p style="margin-top:12px"><strong style="color:var(--text)">Loop Lab</strong> is the music maker I'm building on top of it. You make your own songs in the browser, import tracks as editable notes, and drop in sound effects.</p>
+          <p>Over 200 original songs where every note is written as code, some built from words, pictures and even DNA. They're free to use with credit, and <strong style="color:var(--text)">Loop Lab</strong> lets you make your own songs in the browser.</p>
           <div class="chips"><span class="chip">Web Audio API</span><span class="chip">JavaScript</span><span class="chip">Music</span></div>
           <div class="actions">
             <a class="btn primary" href="https://taziz05.github.io/coded-music/" target="_blank" rel="noopener">Listen ▸</a>
@@ -339,11 +373,7 @@
               <a class="btn" href="https://github.com/TAziz05/coded-music/blob/main/HOW-I-VIBE-CODED.md" target="_blank" rel="noopener">Behind the Build</a>
           </div>
         </div>
-        <div class="art shot music-shot">
-          <img src="assets/coded-music.png" alt="Coded Music: a grid of songs with their cover art" loading="lazy" style="object-position: left top;">
-          <span class="year">2026</span>
-        </div>
-      </div>
+      </article>
     </div>
   </section>
 
@@ -389,12 +419,12 @@
       <div class="grid-2">
         <article class="card">
           <div class="art shot">
-            <img src="assets/final-game-2019.png" alt="THE FINAL GAME: a sword-swinging Charmander in the lava hallway" loading="lazy" style="object-position: center 22%;">
+            <img src="assets/final-game-2019.png" alt="THE FINAL GAME: a Charmander with a sword in the flower garden, next to a dropped diamond" loading="lazy" style="object-position: center 8%;">
             <span class="year">2019</span>
           </div>
           <div class="body">
             <h3>THE FINAL GAME</h3>
-            <p>A game I made in 2019 at the NC Museum of Natural Sciences VisLab summer coding camp. A top-down adventure where a sword-swinging Charmander fights slimes through six rooms, from a flower garden to a lava hallway. I recovered it from an old USB backup in 2026 and got it running again with Claude's help.</p>
+            <p>A top-down adventure I made at the NC Museum of Natural Sciences VisLab summer coding camp. In 2026 I recovered it from an old USB and got it running again with Claude's help.</p>
             <div class="chips"><span class="chip">Processing</span><span class="chip">Java</span></div>
             <div class="actions">
               <a class="btn primary" href="https://github.com/TAziz05/NCMNS-VisLab-Summer-Camp-2019#screenshots" target="_blank" rel="noopener">Screenshots ▸</a>
@@ -409,7 +439,7 @@
           </div>
           <div class="body">
             <h3>US Car Accidents Analysis</h3>
-            <p>My first data science project, built with Team Gravity Wells at AI Camp in summer 2022, complete with interactive maps and charts. We used Kaggle data on US traffic accidents from 2016 to 2021 to predict how severe a crash would be from conditions like weather, temperature and time of day. We compared KNN, SVC, random forest and neural network models, and random forest won at about 68% accuracy.</p>
+            <p>My first data science project, from AI Camp in 2022. We mapped US traffic accidents from 2016 to 2021 and compared four models for predicting crash severity. Random forest won, at about 68% accuracy.</p>
             <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Plotly</span><span class="chip">scikit-learn</span></div>
             <div class="actions">
               <a class="btn primary" href="templates/index.html">View project ▸</a>
