@@ -297,9 +297,9 @@
         <li><a href="#games">Games</a></li>
         <li><a href="#music">Music</a></li>
         <li><a href="#tools">Tools</a></li>
-        <li><a href="#highlights">Highlights</a></li>
         <li><a href="#channels">Channels</a></li>
         <li><a href="#data">Data Science</a></li>
+        <li><a href="#highlights">Highlights</a></li>
         <li><a href="#about">About</a></li>
       </ul>
     </div>
@@ -457,11 +457,84 @@
     </div>
   </section>
 
+  <!-- ===================== CHANNELS ===================== -->
+  <section id="channels">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="num">04</span>
+        <h2>Videos &amp; streams</h2>
+        <p>Mostly Fortnite.</p>
+      </div>
+      <div class="grid-2">
+        <a class="card" href="https://www.youtube.com/@taziz322" target="_blank" rel="noopener">
+          <div class="chan">
+            <div class="ico" style="background:var(--yt)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg></div>
+            <div><h3>YouTube</h3><p>@taziz322 · Fortnite gameplay videos</p></div>
+            <span class="go">→</span>
+          </div>
+        </a>
+        <a class="card" href="https://www.twitch.tv/taziz322" target="_blank" rel="noopener">
+          <div class="chan">
+            <div class="ico" style="background:var(--twitch)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.3 1 2 6.6v15.1h5.4V24h3l2.9-2.3h4.4L23 16V1H4.3Zm16.7 14-3.4 3.4h-5.4l-2.9 2.9v-2.9H4.7V3h16.3v12Zm-3.4-7.4v5.9h-2V7.6h2Zm-5.4 0v5.9h-2V7.6h2Z"/></svg></div>
+            <div><h3>Twitch</h3><p>taziz322 · Live streams</p></div>
+            <span class="go">→</span>
+          </div>
+        </a>
+      </div>
+      <div class="code-box">
+        Support me in the Fortnite Item Shop with creator code <strong id="code">TAziz</strong> <span style="font-size:.78rem">#EpicPartner</span>
+        <button class="copy" id="copyBtn" type="button">Copy code</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DATA SCIENCE ===================== -->
+  <section id="data">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="num">05</span>
+        <h2>Data science &amp; more</h2>
+        <p>Where it started.</p>
+      </div>
+      <div class="grid-2">
+        <article id="the-final-game" class="card">
+          <div class="art shot">
+            <img src="assets/final-game-2019.png" alt="THE FINAL GAME: a Charmander with a sword in the flower garden, next to a dropped diamond" loading="lazy" style="object-position: center 8%;">
+            <span class="year">2019</span>
+          </div>
+          <div class="body">
+            <h3>THE FINAL GAME</h3>
+            <p>A top-down adventure I made at the NC Museum of Natural Sciences VisLab summer coding camp. In 2026 I recovered it from an old USB and got it running again with Claude's help.</p>
+            <div class="chips"><span class="chip">Processing</span><span class="chip">Java</span></div>
+            <div class="actions">
+              <a class="btn primary" href="https://github.com/TAziz05/NCMNS-VisLab-Summer-Camp-2019#screenshots" target="_blank" rel="noopener">Screenshots ▸</a>
+              <a class="btn" href="https://github.com/TAziz05/NCMNS-VisLab-Summer-Camp-2019" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="art shot">
+            <img src="assets/car-accidents.png" alt="Choropleth map of mean US car accident severity by state" loading="lazy" style="object-position: center center;">
+            <span class="year">2022</span>
+          </div>
+          <div class="body">
+            <h3>US Car Accidents Analysis</h3>
+            <p>My first data science project, from AI Camp in 2022. We mapped US traffic accidents from 2016 to 2021 and compared four models for predicting crash severity. Random forest won, at about 68% accuracy.</p>
+            <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Plotly</span><span class="chip">scikit-learn</span></div>
+            <div class="actions">
+              <a class="btn primary" href="templates/index.html">View project ▸</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== HIGHLIGHTS ===================== -->
   <section id="highlights">
     <div class="wrap">
       <div class="sec-head">
-        <span class="num">04</span>
+        <span class="num">06</span>
         <h2>Highlights</h2>
         <p>The big moments so far.</p>
       </div>
@@ -515,79 +588,6 @@
           <div class="hbody"><div class="htags"><a class="htag dd" href="#drop-in-daily">Drop-In Daily</a></div><h3>Where it all started</h3><p>The first version of Drop-In Daily, with 42 questions in three difficulties, and the start of my vibe-coding journey.</p></div>
         </li>
       </ol>
-    </div>
-  </section>
-
-  <!-- ===================== CHANNELS ===================== -->
-  <section id="channels">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="num">05</span>
-        <h2>Videos &amp; streams</h2>
-        <p>Mostly Fortnite.</p>
-      </div>
-      <div class="grid-2">
-        <a class="card" href="https://www.youtube.com/@taziz322" target="_blank" rel="noopener">
-          <div class="chan">
-            <div class="ico" style="background:var(--yt)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg></div>
-            <div><h3>YouTube</h3><p>@taziz322 · Fortnite gameplay videos</p></div>
-            <span class="go">→</span>
-          </div>
-        </a>
-        <a class="card" href="https://www.twitch.tv/taziz322" target="_blank" rel="noopener">
-          <div class="chan">
-            <div class="ico" style="background:var(--twitch)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.3 1 2 6.6v15.1h5.4V24h3l2.9-2.3h4.4L23 16V1H4.3Zm16.7 14-3.4 3.4h-5.4l-2.9 2.9v-2.9H4.7V3h16.3v12Zm-3.4-7.4v5.9h-2V7.6h2Zm-5.4 0v5.9h-2V7.6h2Z"/></svg></div>
-            <div><h3>Twitch</h3><p>taziz322 · Live streams</p></div>
-            <span class="go">→</span>
-          </div>
-        </a>
-      </div>
-      <div class="code-box">
-        Support me in the Fortnite Item Shop with creator code <strong id="code">TAziz</strong> <span style="font-size:.78rem">#EpicPartner</span>
-        <button class="copy" id="copyBtn" type="button">Copy code</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== DATA SCIENCE ===================== -->
-  <section id="data">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="num">06</span>
-        <h2>Data science &amp; more</h2>
-        <p>Where it started.</p>
-      </div>
-      <div class="grid-2">
-        <article id="the-final-game" class="card">
-          <div class="art shot">
-            <img src="assets/final-game-2019.png" alt="THE FINAL GAME: a Charmander with a sword in the flower garden, next to a dropped diamond" loading="lazy" style="object-position: center 8%;">
-            <span class="year">2019</span>
-          </div>
-          <div class="body">
-            <h3>THE FINAL GAME</h3>
-            <p>A top-down adventure I made at the NC Museum of Natural Sciences VisLab summer coding camp. In 2026 I recovered it from an old USB and got it running again with Claude's help.</p>
-            <div class="chips"><span class="chip">Processing</span><span class="chip">Java</span></div>
-            <div class="actions">
-              <a class="btn primary" href="https://github.com/TAziz05/NCMNS-VisLab-Summer-Camp-2019#screenshots" target="_blank" rel="noopener">Screenshots ▸</a>
-              <a class="btn" href="https://github.com/TAziz05/NCMNS-VisLab-Summer-Camp-2019" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="art shot">
-            <img src="assets/car-accidents.png" alt="Choropleth map of mean US car accident severity by state" loading="lazy" style="object-position: center center;">
-            <span class="year">2022</span>
-          </div>
-          <div class="body">
-            <h3>US Car Accidents Analysis</h3>
-            <p>My first data science project, from AI Camp in 2022. We mapped US traffic accidents from 2016 to 2021 and compared four models for predicting crash severity. Random forest won, at about 68% accuracy.</p>
-            <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Plotly</span><span class="chip">scikit-learn</span></div>
-            <div class="actions">
-              <a class="btn primary" href="templates/index.html">View project ▸</a>
-            </div>
-          </div>
-        </article>
-      </div>
     </div>
   </section>
 
