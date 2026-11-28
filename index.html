@@ -251,6 +251,35 @@
       .actions .btn { padding: 8px 12px; font-size: .85rem; }
     }
 
+    .timeline { list-style: none; position: relative; margin: 0; padding: 0; }
+    .timeline::before { content: ""; position: absolute; left: 150px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+    .timeline li { position: relative; display: grid; grid-template-columns: 150px 1fr; gap: 0 32px; padding: 0 0 26px; }
+    .timeline li::before { content: ""; position: absolute; left: 144px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 3px solid var(--gold); }
+    .timeline li:first-child::before { background: var(--gold); box-shadow: 0 0 12px rgba(255,210,63,.6); }
+    .hdate { font-size: .85rem; font-weight: 700; color: var(--muted); padding-top: 2px; text-align: right; padding-right: 22px; }
+    .hbody h3 { font-family: "Bricolage Grotesque", sans-serif; font-size: 1.15rem; letter-spacing: -.01em; margin: 6px 0 4px; }
+    .hbody p { color: var(--muted); font-size: .95rem; max-width: 640px; }
+    .htags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .htag { font-size: .72rem; font-weight: 700; letter-spacing: .03em; padding: 3px 9px; border-radius: 999px; border: 1px solid; }
+    a.htag:hover { filter: brightness(1.25); }
+    .htag.dd { color: #7cc0ff; border-color: rgba(124,192,255,.45); background: rgba(124,192,255,.08); }
+    .htag.pc { color: #ff8a80; border-color: rgba(255,138,128,.45); background: rgba(255,138,128,.08); }
+    .htag.cm { color: #ffb86b; border-color: rgba(255,184,107,.45); background: rgba(255,184,107,.08); }
+    .htag.un { color: #6ee7b7; border-color: rgba(110,231,183,.45); background: rgba(110,231,183,.08); }
+    .htag.ts { color: #c4b5fd; border-color: rgba(196,181,253,.45); background: rgba(196,181,253,.08); }
+    .htag.fg { color: #fca5a5; border-color: rgba(252,165,165,.4); background: rgba(252,165,165,.06); }
+    .htag.pf { color: var(--gold); border-color: rgba(255,210,63,.45); background: rgba(255,210,63,.08); }
+    .about .body p { color: var(--text); font-size: 1.02rem; max-width: 760px; margin-bottom: 18px; }
+    .btn.li svg { color: #4ea1ff; }
+    .li-btn svg { color: #1a1405; }
+    article[id], section[id] { scroll-margin-top: 76px; }
+    @media (max-width: 640px) {
+      .timeline::before { left: 6px; }
+      .timeline li { grid-template-columns: 1fr; padding-left: 30px; }
+      .timeline li::before { left: 0; }
+      .hdate { text-align: left; padding: 0; }
+    }
+
     /* ---------- Footer ---------- */
     footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 30px 0 40px; color: var(--muted); font-size: .88rem; }
     footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; }
@@ -268,8 +297,10 @@
         <li><a href="#games">Games</a></li>
         <li><a href="#music">Music</a></li>
         <li><a href="#tools">Tools</a></li>
+        <li><a href="#highlights">Highlights</a></li>
         <li><a href="#channels">Channels</a></li>
         <li><a href="#data">Data Science</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
     </div>
   </nav>
@@ -294,6 +325,14 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
           GitHub
         </a>
+        <a class="btn li" href="https://www.linkedin.com/in/towfiq-aziz-0aa333234" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn" href="mailto:towfiq.aziz11@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          Email
+        </a>
       </div>
     </div>
   </header>
@@ -308,14 +347,14 @@
       </div>
       <div class="grid-2">
 
-        <article class="card">
+        <article id="drop-in-daily" class="card">
           <div class="art shot">
             <img src="assets/drop-in-daily.png" alt="Drop-In Daily by day: a Fortnite trivia question with 100 players left" loading="lazy" style="object-position: center center;">
             <span class="year">2026</span>
           </div>
           <div class="body">
             <h3>Drop-In Daily</h3>
-            <p>A new set of Fortnite trivia every day. You skydive in, survive the elimination feed, and the sky follows your real clock. Every answer is checked against the Fortnite Wiki, and you can play on Discord and Twitch too.</p>
+            <p>A new set of Fortnite trivia every day. You skydive in, survive the elimination feed, and fill your own Locker as you play. Every answer is checked against the Fortnite Wiki, and you can play on Discord and Twitch too.</p>
             <div class="chips"><span class="chip">JavaScript</span><span class="chip">GitHub Pages</span><span class="chip">Discord</span><span class="chip">Twitch Extension</span></div>
             <div class="actions">
               <a class="btn primary" href="https://taziz05.github.io/drop-in-daily/" target="_blank" rel="noopener">Play ▸</a>
@@ -325,14 +364,14 @@
           </div>
         </article>
 
-        <article class="card">
+        <article id="daily-poke-catch" class="card">
           <div class="art shot">
             <img src="assets/daily-poke-catch.png" alt="Daily Poké Catch at night: a wild question appears in a retro battle screen" loading="lazy" style="object-position: center center;">
             <span class="year">2026</span>
           </div>
           <div class="body">
             <h3>Daily Poké Catch</h3>
-            <p>Every question is a wild encounter in a retro battle screen, and you catch it by answering right. There's a new set every day, from Poké Ball to Master Ball difficulty.</p>
+            <p>Every question is a wild encounter in a retro battle screen, and every one you catch fills your Pokédex and Badge Case. There's a new set every day, from Poké Ball to Master Ball difficulty.</p>
             <div class="chips"><span class="chip">JavaScript</span><span class="chip">GitHub Pages</span><span class="chip">Discord</span></div>
             <div class="actions">
               <a class="btn primary" href="https://taziz05.github.io/daily-poke-catch/" target="_blank" rel="noopener">Play ▸</a>
@@ -343,7 +382,7 @@
         </article>
 
       </div>
-      <article class="card wide">
+      <article id="trivia-study" class="card wide">
         <div class="art shot">
           <img src="assets/trivia-study.png" alt="Trivia Study: turn your class notes into a daily quiz" loading="lazy" style="object-position: center center;">
           <span class="year">2026</span>
@@ -370,7 +409,7 @@
         <h2>Coded Music</h2>
         <p>Every note is written as code, with no AI audio.</p>
       </div>
-      <article class="card wide music-card">
+      <article id="coded-music" class="card wide music-card">
         <div class="art shot">
           <img src="assets/coded-music.png" alt="Coded Music: song covers and the Coded Music logo" loading="lazy" style="object-position: center center;">
           <span class="year">2026</span>
@@ -399,7 +438,7 @@
         <h2>Tools</h2>
         <p>Things I made to fix my own problems.</p>
       </div>
-      <article class="card wide">
+      <article id="unscroll" class="card wide">
         <div class="art shot">
           <img src="assets/unscroll.png" alt="Unscroll: Feed Fence sliders, a scroll odometer and a speed bump screen" loading="lazy" style="object-position: center center;">
           <span class="year">2026</span>
@@ -418,11 +457,72 @@
     </div>
   </section>
 
+  <!-- ===================== HIGHLIGHTS ===================== -->
+  <section id="highlights">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="num">04</span>
+        <h2>Highlights</h2>
+        <p>The big moments so far.</p>
+      </div>
+      <ol class="timeline">
+        <li>
+          <div class="hdate">Nov 27, 2026</div>
+          <div class="hbody"><div class="htags"><a class="htag dd" href="#drop-in-daily">Drop-In Daily</a><a class="htag pc" href="#daily-poke-catch">Poké Catch</a></div><h3>The Collections update</h3><p>Every question you answer fills a Locker or a Pokédex and Badge Case, with supply drops, completion achievements and new music.</p></div>
+        </li>
+        <li>
+          <div class="hdate">Nov 26, 2026</div>
+          <div class="hbody"><div class="htags"><a class="htag un" href="#unscroll">Unscroll</a></div><h3>Unscroll is released</h3><p>A free browser extension and Safari userscript that helps you stop doomscrolling on YouTube, Instagram, TikTok, X, Reddit and Facebook.</p></div>
+        </li>
+        <li>
+          <div class="hdate">Nov 25, 2026</div>
+          <div class="hbody"><div class="htags"><a class="htag fg" href="#the-final-game">THE FINAL GAME</a></div><h3>A 2019 game comes back to life</h3><p>Recovered my summer camp game from an old USB, got it running again, and gave it walls, a real game over and new coded sounds.</p></div>
+        </li>
+        <li>
+          <div class="hdate">Nov 25, 2026</div>
+          <div class="hbody"><div class="htags"><span class="htag pf">Portfolio</span></div><h3>This portfolio launches</h3><p>All my projects in one place, with a Behind the Build write-up for each one.</p></div>
+        </li>
+        <li>
+          <div class="hdate">Nov 24–25, 2026</div>
+          <div class="hbody"><div class="htags"><a class="htag dd" href="#drop-in-daily">Drop-In Daily</a><a class="htag pc" href="#daily-poke-catch">Poké Catch</a></div><h3>Real sky events</h3><p>Meteor showers, eclipses, blood moons, northern lights, rain and rainbows, plus new secrets to find.</p></div>
+        </li>
+        <li>
+          <div class="hdate">Nov 23, 2026</div>
+          <div class="hbody"><div class="htags"><a class="htag dd" href="#drop-in-daily">Drop-In Daily</a><a class="htag pc" href="#daily-poke-catch">Poké Catch</a></div><h3>Day and night</h3><p>Both games follow your clock from sunrise to nightfall, with your daily stats and how everyone else did.</p></div>
+        </li>
+        <li>
+          <div class="hdate">Nov 22, 2026</div>
+          <div class="hbody"><div class="htags"><a class="htag cm" href="#coded-music">Coded Music</a></div><h3>Coded Music begins</h3><p>The first songs, the song website and Loop Lab, all in one day. It has grown to 221 songs written entirely as code.</p></div>
+        </li>
+        <li>
+          <div class="hdate">Nov 21, 2026</div>
+          <div class="hbody"><div class="htags"><a class="htag dd" href="#drop-in-daily">Drop-In Daily</a><a class="htag pc" href="#daily-poke-catch">Poké Catch</a></div><h3>The big revamp</h3><p>A whole new look, Achievements with secrets, sound effects and music written as code, and Twitch extensions with a live play-along.</p></div>
+        </li>
+        <li>
+          <div class="hdate">Oct 20, 2026</div>
+          <div class="hbody"><div class="htags"><a class="htag pc" href="#daily-poke-catch">Poké Catch</a></div><h3>Daily Poké Catch launches</h3><p>10,310 questions, every mode and a Discord bot on day one, thanks to everything I had built for Drop-In Daily.</p></div>
+        </li>
+        <li>
+          <div class="hdate">Oct 18, 2026</div>
+          <div class="hbody"><div class="htags"><a class="htag ts" href="#trivia-study">Trivia Study</a></div><h3>Trivia Study is built</h3><p>Any student can turn their class PDFs into a daily quiz.</p></div>
+        </li>
+        <li>
+          <div class="hdate">Oct 14, 2026</div>
+          <div class="hbody"><div class="htags"><a class="htag dd" href="#drop-in-daily">Drop-In Daily</a></div><h3>Drop-In Daily comes to Discord</h3><p>A bot and an Activity, plus GoatCounter to see how many people play.</p></div>
+        </li>
+        <li>
+          <div class="hdate">Oct 13, 2026</div>
+          <div class="hbody"><div class="htags"><a class="htag dd" href="#drop-in-daily">Drop-In Daily</a></div><h3>Where it all started</h3><p>The first version of Drop-In Daily, with 42 questions in three difficulties, and the start of my vibe-coding journey.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
   <!-- ===================== CHANNELS ===================== -->
   <section id="channels">
     <div class="wrap">
       <div class="sec-head">
-        <span class="num">04</span>
+        <span class="num">05</span>
         <h2>Videos &amp; streams</h2>
         <p>Mostly Fortnite.</p>
       </div>
@@ -453,12 +553,12 @@
   <section id="data">
     <div class="wrap">
       <div class="sec-head">
-        <span class="num">05</span>
+        <span class="num">06</span>
         <h2>Data science &amp; more</h2>
         <p>Where it started.</p>
       </div>
       <div class="grid-2">
-        <article class="card">
+        <article id="the-final-game" class="card">
           <div class="art shot">
             <img src="assets/final-game-2019.png" alt="THE FINAL GAME: a Charmander with a sword in the flower garden, next to a dropped diamond" loading="lazy" style="object-position: center 8%;">
             <span class="year">2019</span>
@@ -487,6 +587,27 @@
             </div>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="num">07</span>
+        <h2>About &amp; contact</h2>
+        <p>Say hi.</p>
+      </div>
+      <div class="about card">
+        <div class="body">
+          <p>I'm Towfiq, and I like building things I'd actually use: daily trivia games for the games I love, music for my videos, a study tool for my classes, and a way to scroll less. Since October 2026 I've been vibe coding them with Claude. The ideas, design and fact-checking are mine, and Claude writes the code. When I'm not building, I'm usually playing Fortnite and posting it on YouTube and Twitch.</p>
+          <div class="actions">
+            <a class="btn primary li-btn" href="https://www.linkedin.com/in/towfiq-aziz-0aa333234" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg> LinkedIn</a>
+            <a class="btn" href="mailto:towfiq.aziz11@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg> towfiq.aziz11@gmail.com</a>
+            <a class="btn" href="https://github.com/TAziz05" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
